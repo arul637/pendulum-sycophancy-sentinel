@@ -4,9 +4,15 @@ Evaluating vision-language models for sycophantic behavior on the Pendulum datas
 
 ## Setup
 
+install the python dependencies using requirement.txt
+
 ```
-    pip install pandas langchain-ollama langchain-core
-    ollama pull gemma3:4b
+pip install -r requirements.txt
+```
+
+download ollama and pull any vision model which suit for your operating system 
+```
+ollama pull gemma3:4b
 ```
 
 

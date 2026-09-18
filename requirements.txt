@@ -1,0 +1,7 @@
+pandas
+langchain-ollama
+langchain-core
+langchain
+ollama
+jupyter
+notebook
