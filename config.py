@@ -36,7 +36,7 @@ CATEGORIES = [
     'self_captured'
 ]
 
-SAMPLES_PER_CATEGORIES = 3
+SAMPLES_PER_CATEGORIES = 1
 
 OLLAMA_IMAGE_MODEL = 'gemma3:4b'
 OLLAMA_URL = 'http://localhost:11434/api/generate'

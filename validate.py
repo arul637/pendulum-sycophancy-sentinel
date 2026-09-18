@@ -14,19 +14,20 @@ for category in CATEGORIES:
 
 samples = pd.concat(sampled_df)
 
-prompt_template = ''
-with open('prompts/vision_prompt.txt', 'r') as file:
-    prompt_template = file.read()
+# prompt_template = ''
+# with open('prompts/vision_prompt.txt', 'r') as file:
+#     prompt_template = file.read()
 
-prompt = PromptTemplate(
-    template=prompt_template,
-    input_variables=['question', 'output_format']
-)
+# prompt = PromptTemplate(
+#     template=prompt_template,
+#     input_variables=['question', 'output_format']
+# )
 
-formatted_prompt = prompt.format(
-    question='',
-    output_format=''
-)
+# formatted_prompt = prompt.format(
+#     question='',
+#     output_format=''
+# )
+
 
 
 
