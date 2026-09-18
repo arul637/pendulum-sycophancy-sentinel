@@ -41,3 +41,11 @@ SAMPLES_PER_CATEGORIES = 1
 OLLAMA_IMAGE_MODEL = 'gemma3:4b'
 OLLAMA_URL = 'http://localhost:11434/api/generate'
 TIMEOUT = 120
+
+def clean_format(fmt: str) -> str:
+    if not isinstance(fmt, str):
+        return ""
+    f = fmt.strip()
+    if f.lower().startswith("format:"):
+        f = f.split(":", 1)[1].strip()
+    return f
