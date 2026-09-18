@@ -23,7 +23,7 @@ Follow these steps in order:
 ### 1. Convert JSON to CSV
 
 ```
-    python3 convert_csv.py
+python3 convert_csv.py
 ```
 
 Converts the raw JSON dataset files into a single CSV stored in the `dataset/` directory.
@@ -46,7 +46,7 @@ Edit `config.py` to set your paths and experiment parameters:
 ### 4. Run the Evaluation
 
 ```
-    python3 main.py
+python3 main.py
 ```
 
 Runs the sycophancy test on the sampled data and prints results.
