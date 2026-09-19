@@ -5,3 +5,4 @@ langchain
 ollama
 jupyter
 notebook
+werkzeug

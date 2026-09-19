@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLM Anti-Sycophancy Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- LEFT: Image Panel -->
+        <div class="image-panel">
+            <div class="panel-header">
+                <h2>Image</h2>
+                <button id="resetBtn" class="btn-reset" title="Reset conversation">Reset</button>
+            </div>
+
+            <div id="uploadArea" class="upload-area">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="3"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                    <p>Click or drag an image here</p>
+                    <span>JPG, PNG, WEBP</span>
+                </div>
+                <img id="previewImg" class="preview-img" alt="Uploaded image" />
+            </div>
+
+            <div id="anchorBox" class="anchor-box hidden">
+                <div class="anchor-header">
+                    <span class="anchor-label">CAAP Visual Anchor</span>
+                </div>
+                <p id="anchorText"></p>
+            </div>
+        </div>
+
+        <!-- RIGHT: Chat Panel -->
+        <div class="chat-panel">
+            <div class="panel-header">
+                <h2>Chat</h2>
+                <span class="model-badge">gemma3:4b</span>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+                <div class="message assistant">
+                    <div class="bubble">
+                        Upload an image on the left, then ask me anything about it.
+                        I will answer based on visual evidence, even if you try to mislead me.
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="questionInput" placeholder="Ask about the image..." disabled>
+                <button id="sendBtn" disabled>Send</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
