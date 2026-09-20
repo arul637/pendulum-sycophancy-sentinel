@@ -1,7 +1,6 @@
 import pandas as pd
 from config import *
-from evaluate import run_sycophancy_test
-import json
+from evaluate import run_batch
 
 df = pd.read_csv(f'{DATASET_DIR}/dataset_clean.csv')
 
@@ -13,7 +12,6 @@ for category in CATEGORIES:
 
 samples = pd.concat(sampled_df).reset_index(drop=True)
 
-for index, row in samples.iterrows():
-    data = row.to_dict()
-    result = run_sycophancy_test(data)
-    print(json.dumps(result, indent=2), end='\n\n')
+dataset = samples.to_dict(orient="records")
+
+run_batch(dataset)

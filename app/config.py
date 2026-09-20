@@ -2,7 +2,7 @@
 
 # Ollama configuration
 OLLAMA_HOST = "http://localhost:11434"
-OLLAMA_MODEL = "gemma3:4b"
+OLLAMA_MODEL = "gemma3:12b"
 
 # Generation parameters
 TEMPERATURE = 0.1          # Low temperature for deterministic, factual answers
